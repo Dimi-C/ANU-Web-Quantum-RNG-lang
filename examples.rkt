@@ -34,5 +34,5 @@
 
 (define-example-code
   ANU-Web-Quantum-RNG-lang 006-easy
-  (awqrng-fetch-hex16 5)
+  (awqrng-fetch-hex16 3 2)
   )
