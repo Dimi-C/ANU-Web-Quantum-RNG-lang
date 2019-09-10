@@ -3,11 +3,36 @@
 (require ts-kata-util
   ANU-Web-Quantum-RNG-lang)
 
-;And you probably want your lang, not racket below.
-;  But technically you can make examples for any language
-(define-example-code racket my-example-1
-  (require 2htdp/image)
+; -----------------------
 
-  (circle 40 'solid 'red))
+(define-example-code
+  ANU-Web-Quantum-RNG-lang 8bit-1
+  (awqrng-u8)
+  )
 
-;You can define as many examples as you want in this file
+(define-example-code
+  ANU-Web-Quantum-RNG-lang 16bit-1
+  (awqrng-u16)
+  )
+
+(define-example-code
+  ANU-Web-Quantum-RNG-lang hex16bit-1
+  (awqrng-hex16)
+  )
+
+; -----------------------
+
+(define-example-code
+  ANU-Web-Quantum-RNG-lang 8bit-2
+  (awqrng-fetch-u8 9)
+  )
+
+(define-example-code
+  ANU-Web-Quantum-RNG-lang 16bit-2
+  (awqrng-fetch-u16 10)
+  )
+
+(define-example-code
+  ANU-Web-Quantum-RNG-lang hex16bit-2
+  (awqrng-fetch-hex16 5)
+  )
